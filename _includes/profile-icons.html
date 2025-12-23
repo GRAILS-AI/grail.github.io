@@ -1,7 +1,11 @@
-{% if include.links.home or include.links.scholar or include.links.linkedin %}
+{% assign home = include.links.home | default: "" %}
+{% assign scholar = include.links.scholar | default: "" %}
+{% assign linkedin = include.links.linkedin | default: "" %}
+
+{% if home != "" or scholar != "" or linkedin != "" %}
   <div class="profile-icons">
-    {% if include.links.home %}
-      <a href="{{ include.links.home }}" target="_blank" rel="noopener" aria-label="Homepage">
+    {% if home != "" %}
+      <a href="{{ home }}" target="_blank" rel="noopener" aria-label="Homepage" title="Homepage">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M3 10.5L12 4l9 6.5" />
           <path d="M5 9.5V20h14V9.5" />
@@ -9,8 +13,8 @@
         </svg>
       </a>
     {% endif %}
-    {% if include.links.scholar %}
-      <a href="{{ include.links.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+    {% if scholar != "" %}
+      <a href="{{ scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M2.5 9.5L12 5l9.5 4.5L12 14z" />
           <path d="M6 12.5v4.5c0 1.7 12 1.7 12 0v-4.5" />
@@ -18,8 +22,8 @@
         </svg>
       </a>
     {% endif %}
-    {% if include.links.linkedin %}
-      <a href="{{ include.links.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+    {% if linkedin != "" %}
+      <a href="{{ linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="8" width="4" height="13" />
           <path d="M5 4.5a1.5 1.5 0 1 0 0.01 0z" />

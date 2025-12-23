@@ -15,10 +15,55 @@
     <div class="callout" id="submit">
       <h3>{{ site.data.submission.portal.title }}</h3>
       <p>{{ site.data.submission.portal.description }}</p>
-      <a class="btn primary" href="{{ site.data.submission.portal.primary_href }}">{{ site.data.submission.portal.primary_label }}</a>
-      <a class="btn ghost" href="{{ site.data.submission.portal.secondary_href }}">{{ site.data.submission.portal.secondary_label }}</a>
+      {% assign primary_href = site.data.submission.portal.primary_href %}
+      {% if primary_href == nil or primary_href == "" or primary_href == "#" %}
+        <span class="btn primary disabled" aria-disabled="true">{{ site.data.submission.portal.primary_label }}</span>
+      {% elsif primary_href contains "http://" or primary_href contains "https://" %}
+        <a class="btn primary" href="{{ primary_href }}" target="_blank" rel="noopener">{{ site.data.submission.portal.primary_label }}</a>
+      {% else %}
+        <a class="btn primary" href="{{ primary_href | relative_url }}">{{ site.data.submission.portal.primary_label }}</a>
+      {% endif %}
+
+      {% assign secondary_href = site.data.submission.portal.secondary_href %}
+      {% if secondary_href contains "http://" or secondary_href contains "https://" %}
+        <a class="btn ghost" href="{{ secondary_href }}" target="_blank" rel="noopener">{{ site.data.submission.portal.secondary_label }}</a>
+      {% elsif secondary_href | slice: 0, 1 == "#" %}
+        <a class="btn ghost" href="{{ secondary_href }}">{{ site.data.submission.portal.secondary_label }}</a>
+      {% else %}
+        <a class="btn ghost" href="{{ secondary_href | relative_url }}">{{ site.data.submission.portal.secondary_label }}</a>
+      {% endif %}
     </div>
   </div>
+  {% if site.data.submission.paper_types or site.data.submission.how_to_submit %}
+    <div class="grid submission-extras">
+      {% if site.data.submission.paper_types %}
+        <article class="submission-card">
+          <h3>What you can submit</h3>
+          <div class="submission-types">
+            {% for item in site.data.submission.paper_types %}
+              <div class="submission-type">
+                <strong>{{ item.title }}</strong>
+                <span>{{ item.description }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        </article>
+      {% endif %}
+      {% if site.data.submission.how_to_submit %}
+        <article class="submission-card">
+          <h3>How to submit</h3>
+          <ol class="submission-steps">
+            {% for step in site.data.submission.how_to_submit %}
+              <li>
+                <strong>{{ step.title }}</strong>
+                <span>{{ step.description }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+        </article>
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="policy-grid">
     {% for item in site.data.submission.policies %}
       <div>

@@ -6,16 +6,27 @@
   <div class="grid organizers">
     {% for organizer in site.data.organizers %}
       <article>
-        {% if organizer.photo %}
+        {% if organizer.photo and organizer.photo != "" %}
           <img class="avatar-photo" src="{{ organizer.photo | relative_url }}" alt="{{ organizer.name }}" />
+        {% else %}
+          {% assign name_parts = organizer.name | split: " " %}
+          {% assign first_initial = name_parts[0] | slice: 0, 1 %}
+          {% assign last_initial = name_parts | last | slice: 0, 1 %}
+          <div class="avatar">{{ first_initial }}{{ last_initial }}</div>
         {% endif %}
         {% assign profile_url = organizer.profile %}
         {% if profile_url == nil or profile_url == "" %}
-          {% if organizer.links and organizer.links.home %}
-            {% assign profile_url = organizer.links.home %}
+          {% if organizer.links %}
+            {% if organizer.links.home and organizer.links.home != "" %}
+              {% assign profile_url = organizer.links.home %}
+            {% elsif organizer.links.scholar and organizer.links.scholar != "" %}
+              {% assign profile_url = organizer.links.scholar %}
+            {% elsif organizer.links.linkedin and organizer.links.linkedin != "" %}
+              {% assign profile_url = organizer.links.linkedin %}
+            {% endif %}
           {% endif %}
         {% endif %}
-        {% if profile_url %}
+        {% if profile_url and profile_url != "" %}
           <h3><a class="profile-link" href="{{ profile_url }}" target="_blank" rel="noopener">{{ organizer.name }}</a></h3>
         {% else %}
           <h3>{{ organizer.name }}</h3>

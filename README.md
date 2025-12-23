@@ -6,10 +6,16 @@ Quick edits
 - Update section copy and lists in `_data/*.yml`.
 - Update layout/structure in `_includes/sections/*.html`.
 - Global structure lives in `_layouts/default.html`.
-- Speaker/organizer photos go in `assets/people/` and are referenced from `_data/speakers.yml` and `_data/organizers.yml`.
+- Speaker/organizer photos go in `assets/people/` and are referenced as `photo: "/assets/people/<file>"` in `_data/speakers.yml` and `_data/organizers.yml`.
 
 Local preview
 ```
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --config _config.yml,_config.dev.yml
 ```
+
+GitHub Pages deployment
+- **Project site** (recommended for this repo name): `https://<org>.github.io/<repo>/` and set `_config.yml` `baseurl: "/<repo>"`.
+- **Org/user site** (clean root URL): move this site into a repo named `<org>.github.io` and set `_config.yml` `baseurl: ""`.
+
+See `EDITING_GUIDE.md` for organizer-friendly editing notes.

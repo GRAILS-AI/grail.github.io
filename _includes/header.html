@@ -5,25 +5,46 @@
 
 <header class="site-header">
   <nav class="nav">
-    <a class="brand" href="#home" aria-label="{{ site.data.site.brand.name }} Home">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.site.brand.name }} Home">
       <img src="{{ '/assets/logo.svg' | relative_url }}" alt="{{ site.data.site.brand.name }}" />
       <span>
         <strong>{{ site.data.site.brand.name }}</strong>
         <em>{{ site.data.site.brand.subtitle }}</em>
       </span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
-      <span></span>
-      <span></span>
-    </button>
     <div class="nav-links" id="site-links">
       {% for item in site.data.navigation %}
+        {% assign href = item.href %}
         {% if item.cta %}
-          <a class="nav-cta" href="{{ item.href }}">{{ item.label }}</a>
+          {% if href contains "http://" or href contains "https://" or href contains "mailto:" %}
+            <a class="nav-cta" href="{{ href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+          {% elsif href | slice: 0, 1 == "#" %}
+            <a class="nav-cta" href="{{ href }}">{{ item.label }}</a>
+          {% else %}
+            <a class="nav-cta" href="{{ href | relative_url }}">{{ item.label }}</a>
+          {% endif %}
         {% else %}
-          <a href="{{ item.href }}">{{ item.label }}</a>
+          {% if href contains "http://" or href contains "https://" or href contains "mailto:" %}
+            <a href="{{ href }}" target="_blank" rel="noopener">{{ item.label }}</a>
+          {% elsif href | slice: 0, 1 == "#" %}
+            <a href="{{ href }}">{{ item.label }}</a>
+          {% else %}
+            <a href="{{ href | relative_url }}">{{ item.label }}</a>
+          {% endif %}
         {% endif %}
       {% endfor %}
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search" type="button" data-search-open aria-label="Search site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 </header>

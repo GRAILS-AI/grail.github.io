@@ -8,13 +8,27 @@
     <p class="lead">{{ site.data.site.hero.lead }}</p>
     <div class="hero-actions">
       {% for cta in site.data.site.hero.ctas %}
-        <a class="btn {{ cta.style }}" href="{{ cta.href }}">{{ cta.label }}</a>
+        {% assign href = cta.href %}
+        {% if href contains "http://" or href contains "https://" or href contains "mailto:" %}
+          <a class="btn {{ cta.style }}" href="{{ href }}" target="_blank" rel="noopener">{{ cta.label }}</a>
+        {% elsif href | slice: 0, 1 == "#" %}
+          <a class="btn {{ cta.style }}" href="{{ href }}">{{ cta.label }}</a>
+        {% else %}
+          <a class="btn {{ cta.style }}" href="{{ href | relative_url }}">{{ cta.label }}</a>
+        {% endif %}
       {% endfor %}
     </div>
     <div class="hero-metrics">
       {% for metric in site.data.site.hero.metrics %}
         {% if metric.href %}
-          <a class="metric-card" href="{{ metric.href }}">
+          {% assign href = metric.href %}
+          {% if href contains "http://" or href contains "https://" %}
+            <a class="metric-card" href="{{ href }}" target="_blank" rel="noopener">
+          {% elsif href | slice: 0, 1 == "#" %}
+            <a class="metric-card" href="{{ href }}">
+          {% else %}
+            <a class="metric-card" href="{{ href | relative_url }}">
+          {% endif %}
             <strong>{{ metric.value }}</strong>
             <span>{{ metric.label }}</span>
           </a>

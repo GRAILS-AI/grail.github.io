@@ -7,3 +7,10 @@ permalink: pretty
 theme: null
 exclude:
   - legacy
+  - README.md
+  - EDITING_GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tmp_latex
+  - files/GRAIL_WORKSHOP_CVPR_Updated.zip

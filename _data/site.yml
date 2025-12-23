@@ -1,9 +1,11 @@
 announcement:
   pill: "Accepted"
-  text: "CVPR 2026 Workshop in Denver, USA. Full-day program requested."
+  text: "CVPR 2026 Workshop in Denver, USA. CFP opens Jan 6, 2026 (AoE)."
 brand:
   name: "GRAIL-V"
   subtitle: "CVPR 2026"
+seo:
+  og_image: "/assets/og-image.png"
 hero:
   eyebrow: "Grounded Retrieval and Agentic Intelligence for Vision-Language"
   title: "GRAIL-V puts evidence at the center of"
@@ -11,10 +13,10 @@ hero:
   lead: "A CVPR 2026 workshop dedicated to grounded multimodal retrieval, reranking, and verification for agentic vision systems across images, video, documents, charts, and UI."
   ctas:
     - label: "Submit Paper"
-      href: "#submit"
+      href: "/cfp/#submit"
       style: "primary"
     - label: "Read the Proposal"
-      href: "files/GRAIL_WORKSHOP_CVPR_Accepted.pdf"
+      href: "/files/GRAIL_WORKSHOP_CVPR_Accepted.pdf"
       style: "ghost"
     - label: "Join Mailing List"
       href: "mailto:amit.h.agarwal@oracle.com?subject=GRAIL-V%20interest"
@@ -22,16 +24,16 @@ hero:
   metrics:
     - value: "100-300"
       label: "Expected attendees"
-      href: "#venue"
+      href: "/venue/#venue"
     - value: "4"
       label: "Keynotes"
-      href: "#speakers"
+      href: "/speakers/#speakers"
     - value: "2"
       label: "Oral sessions"
-      href: "#program"
+      href: "/program/#program"
     - value: "2"
       label: "Poster and demo blocks"
-      href: "#program"
+      href: "/program/#program"
   countdowns:
     - label: "Submission deadline"
       text: "Mar 5, 2026 (AoE)"

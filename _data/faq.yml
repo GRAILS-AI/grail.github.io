@@ -1,3 +1,7 @@
+- question: "What kinds of papers fit GRAIL-V?"
+  answer: "Work on grounded multimodal retrieval, reranking, and verification for agentic vision-language systems: region/page/moment evidence, hybrid structured+unstructured retrieval, tool use, calibration/abstention, robustness, and deployment efficiency."
+- question: "What should I include to make my submission strong?"
+  answer: "Clear evidence grounding (citations or region/page/moment provenance), realistic efficiency reporting (latency/memory/cost), and reproducible artifacts with licenses when possible."
 - question: "Is GRAIL-V archival?"
   answer: "Yes. Accepted papers appear in the CVPR 2026 Workshop proceedings."
 - question: "Can I submit non-archival or demo-only work?"

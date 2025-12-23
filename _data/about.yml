@@ -1,8 +1,8 @@
 eyebrow: "Why now"
 title: "Grounded evidence is the missing piece for agentic vision"
 paragraphs:
-  - "Agentic vision systems now plan multi-step workflows, retrieve evidence from complex sources, rerank candidates, and verify before acting. Yet shared protocols for grounded retrieval and verification are fragmented across CV, IR, NLP, HCI, and systems."
-  - "GRAIL-V brings the community together to define reproducible evaluation, reliable grounding, and efficiency metrics that matter in deployment: latency, memory, energy, and cost. We focus on evidence that is linked to regions, pages, and moments, not just documents."
+  - "Vision-language agents increasingly rely on a loop of plan, retrieve, rerank, and verify before acting. But how we measure evidence grounding, calibration, and end-to-end efficiency is still fragmented across communities."
+  - "GRAIL-V brings together CV, IR, NLP, HCI, and systems researchers to share evaluation practices and push toward deployable, accountable agentic vision systems with region/page/moment-level evidence."
 callout:
   title: "Focus areas"
   items:
