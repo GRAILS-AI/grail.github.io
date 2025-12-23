@@ -1,0 +1,12 @@
+eyebrow: "Diversity, inclusion, and ethics"
+title: "Building a responsible and global community"
+paragraphs:
+  - "GRAIL-V prioritizes broad participation across geography, seniority, and institution type. We will circulate the CFP via WiCV, Black in AI, LatinX in AI, WiML, and other community channels."
+  - "Submissions must document artifact licenses, evidence overlays, calibration behavior, and safety testing for leakage and prompt injection. Sensitive data requires an ethics statement and controlled evaluation protocols."
+callout:
+  title: "What we ask authors to provide"
+  items:
+    - "Region, page, and moment evidence overlays."
+    - "Efficiency metrics: latency, memory, and energy."
+    - "Safety analysis: leakage, prompt injection, and tool misuse."
+    - "Licenses and provenance for every artifact."

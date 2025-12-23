@@ -1,0 +1,8 @@
+- question: "Is GRAIL-V archival?"
+  answer: "Yes. Accepted papers appear in the CVPR 2026 Workshop proceedings."
+- question: "Can I submit non-archival or demo-only work?"
+  answer: "Yes. We welcome demos and industry showcases. Indicate this in your submission."
+- question: "Are remote presentations allowed?"
+  answer: "CVPR policy prefers in-person presentations. Remote exceptions require documentation."
+- question: "Do you require code or data release?"
+  answer: "Strongly encouraged. Please include artifact links and licenses when possible."

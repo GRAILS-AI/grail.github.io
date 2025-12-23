@@ -1,0 +1,18 @@
+<section id="topics" class="section alt" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">Topics of interest</p>
+    <h2>Research that advances grounded, efficient, and safe agentic pipelines</h2>
+  </div>
+  <div class="grid cards">
+    {% for topic in site.data.topics %}
+      <article>
+        <h3>{{ topic.title }}</h3>
+        <ul>
+          {% for item in topic.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

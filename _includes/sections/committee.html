@@ -1,0 +1,11 @@
+<section id="committee" class="section alt" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">Program committee</p>
+    <h2>Seed list (expanding to 60-75 members)</h2>
+  </div>
+  <div class="committee-list">
+    {% for member in site.data.committee %}
+      <span>{{ member }}</span>
+    {% endfor %}
+  </div>
+</section>

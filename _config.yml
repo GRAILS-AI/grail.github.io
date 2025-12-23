@@ -1,0 +1,9 @@
+title: "GRAIL-V at CVPR 2026"
+description: "Grounded Retrieval & Agentic Intelligence for Vision-Language."
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: pretty
+theme: null
+exclude:
+  - legacy

@@ -1,0 +1,39 @@
+<section id="speakers" class="section alt" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">Confirmed speakers</p>
+    <h2>Keynotes and panelists bridging retrieval, agents, and vision</h2>
+  </div>
+  <div class="grid speakers">
+    {% for speaker in site.data.speakers %}
+      {% if speaker.type == "panel" %}
+        <article class="highlight">
+          <h3>{{ speaker.name }}</h3>
+          <p>{{ speaker.org }}</p>
+          <span>{{ speaker.focus }}</span>
+        </article>
+      {% else %}
+        <article>
+          {% if speaker.photo %}
+            <img class="avatar-photo" src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" />
+          {% else %}
+            <div class="avatar">{{ speaker.initials }}</div>
+          {% endif %}
+          {% assign profile_url = speaker.profile %}
+          {% if profile_url == nil or profile_url == "" %}
+            {% if speaker.links and speaker.links.home %}
+              {% assign profile_url = speaker.links.home %}
+            {% endif %}
+          {% endif %}
+          {% if profile_url %}
+            <h3><a class="profile-link" href="{{ profile_url }}" target="_blank" rel="noopener">{{ speaker.name }}</a></h3>
+          {% else %}
+            <h3>{{ speaker.name }}</h3>
+          {% endif %}
+          <p>{{ speaker.org }}</p>
+          <span>{{ speaker.focus }}</span>
+          {% include profile-icons.html links=speaker.links %}
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

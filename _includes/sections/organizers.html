@@ -1,0 +1,29 @@
+<section id="organizers" class="section" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">Organizers</p>
+    <h2>Cross-community leadership spanning CV, IR, NLP, HCI, and systems</h2>
+  </div>
+  <div class="grid organizers">
+    {% for organizer in site.data.organizers %}
+      <article>
+        {% if organizer.photo %}
+          <img class="avatar-photo" src="{{ organizer.photo | relative_url }}" alt="{{ organizer.name }}" />
+        {% endif %}
+        {% assign profile_url = organizer.profile %}
+        {% if profile_url == nil or profile_url == "" %}
+          {% if organizer.links and organizer.links.home %}
+            {% assign profile_url = organizer.links.home %}
+          {% endif %}
+        {% endif %}
+        {% if profile_url %}
+          <h3><a class="profile-link" href="{{ profile_url }}" target="_blank" rel="noopener">{{ organizer.name }}</a></h3>
+        {% else %}
+          <h3>{{ organizer.name }}</h3>
+        {% endif %}
+        <p>{{ organizer.org }}</p>
+        <span>{{ organizer.role }}</span>
+        {% include profile-icons.html links=organizer.links %}
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section id="submission" class="section alt" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">{{ site.data.submission.eyebrow }}</p>
+    <h2>{{ site.data.submission.title }}</h2>
+  </div>
+  <div class="split">
+    <div>
+      <p>{{ site.data.submission.lead }}</p>
+      <ul class="checklist">
+        {% for item in site.data.submission.checklist %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="callout" id="submit">
+      <h3>{{ site.data.submission.portal.title }}</h3>
+      <p>{{ site.data.submission.portal.description }}</p>
+      <a class="btn primary" href="{{ site.data.submission.portal.primary_href }}">{{ site.data.submission.portal.primary_label }}</a>
+      <a class="btn ghost" href="{{ site.data.submission.portal.secondary_href }}">{{ site.data.submission.portal.secondary_label }}</a>
+    </div>
+  </div>
+  <div class="policy-grid">
+    {% for item in site.data.submission.policies %}
+      <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>

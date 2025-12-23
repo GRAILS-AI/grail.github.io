@@ -1,0 +1,21 @@
+<section id="inclusion" class="section alt" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">{{ site.data.inclusion.eyebrow }}</p>
+    <h2>{{ site.data.inclusion.title }}</h2>
+  </div>
+  <div class="split">
+    <div>
+      {% for paragraph in site.data.inclusion.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+    <div class="callout">
+      <h3>{{ site.data.inclusion.callout.title }}</h3>
+      <ul>
+        {% for item in site.data.inclusion.callout.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

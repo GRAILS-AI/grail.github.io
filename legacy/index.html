@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GRAIL-V at CVPR 2026 | Grounded Retrieval & Agentic Intelligence for Vision-Language</title>
+    <meta
+      name="description"
+      content="GRAIL-V is a CVPR 2026 workshop on grounded multimodal retrieval, reranking, and verification for agentic vision systems."
+    />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span class="pill">Accepted</span>
+      <span>CVPR 2026 Workshop in Denver, USA. Full-day program requested.</span>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#home" aria-label="GRAIL-V Home">
+          <img src="assets/logo.svg" alt="GRAIL-V" />
+          <span>
+            <strong>GRAIL-V</strong>
+            <em>CVPR 2026</em>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="site-links">
+          <a href="#about">About</a>
+          <a href="#topics">Topics</a>
+          <a href="#dates">Dates</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#program">Program</a>
+          <a href="#submission">Submission</a>
+          <a href="#organizers">Organizers</a>
+          <a href="#venue">Venue</a>
+          <a class="nav-cta" href="#submit">Submit</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" data-animate>
+        <div class="hero-content">
+          <p class="eyebrow">Grounded Retrieval and Agentic Intelligence for Vision-Language</p>
+          <h1>
+            GRAIL-V puts evidence at the center of
+            <span>plan, retrieve, rerank, verify</span>
+          </h1>
+          <p class="lead">
+            A CVPR 2026 workshop dedicated to grounded multimodal retrieval, reranking, and
+            verification for agentic vision systems across images, video, documents, charts, and UI.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#submit">Submit Paper</a>
+            <a class="btn ghost" href="files/GRAIL_WORKSHOP_CVPR_Accepted.pdf">Read the Proposal</a>
+            <a class="btn ghost" href="mailto:amit.h.agarwal@oracle.com?subject=GRAIL-V%20interest">Join Mailing List</a>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <strong>100-300</strong>
+              <span>Expected attendees</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>Keynotes</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>Oral sessions</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>Poster and demo blocks</span>
+            </div>
+          </div>
+          <div class="countdown">
+            <div>
+              <span class="label">Submission deadline</span>
+              <strong data-countdown="submission">Mar 5, 2026 (AoE)</strong>
+            </div>
+            <div>
+              <span class="label">Workshop day</span>
+              <strong data-countdown="workshop">Jun 3-4, 2026</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="signal-card">
+            <h3>P ! R ! R ! V Loop</h3>
+            <p>
+              Plan tasks and tool use, retrieve candidates, rerank with grounded reasoning, then
+              verify with calibrated evidence.
+            </p>
+            <div class="signal-grid">
+              <div>
+                <span>Plan</span>
+                <strong>Agentic routing</strong>
+              </div>
+              <div>
+                <span>Retrieve</span>
+                <strong>Hybrid search</strong>
+              </div>
+              <div>
+                <span>Rerank</span>
+                <strong>Grounded scoring</strong>
+              </div>
+              <div>
+                <span>Verify</span>
+                <strong>Evidence fidelity</strong>
+              </div>
+            </div>
+          </div>
+          <div class="orbit">
+            <div class="orbit-ring"></div>
+            <div class="orbit-ring"></div>
+            <div class="orbit-ring"></div>
+            <div class="orbit-core">
+              <span>GRAIL-V</span>
+              <small>CVPR 2026</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Why now</p>
+          <h2>Grounded evidence is the missing piece for agentic vision</h2>
+        </div>
+        <div class="split">
+          <div>
+            <p>
+              Agentic vision systems now plan multi-step workflows, retrieve evidence from complex
+              sources, rerank candidates, and verify before acting. Yet shared protocols for grounded
+              retrieval and verification are fragmented across CV, IR, NLP, HCI, and systems.
+            </p>
+            <p>
+              GRAIL-V brings the community together to define reproducible evaluation, reliable
+              grounding, and efficiency metrics that matter in deployment: latency, memory, energy,
+              and cost. We focus on evidence that is linked to regions, pages, and moments, not just
+              documents.
+            </p>
+          </div>
+          <div class="callout">
+            <h3>Focus areas</h3>
+            <ul>
+              <li>Hybrid retrieval across structured and unstructured sources.</li>
+              <li>Grounded evaluation beyond Recall@K with provenance and calibration.</li>
+              <li>Efficiency and robustness under real deployment constraints.</li>
+              <li>Reproducible artifacts and lightweight shared harnesses.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tracks">
+          <span class="tag">Primary track</span>
+          <p>Vision, language, and reasoning.</p>
+          <span class="tag">Secondary tracks</span>
+          <p>
+            Multimodal learning, recognition (categorization, detection, retrieval), vision
+            applications and systems, document analysis and understanding, foundation models.
+          </p>
+        </div>
+      </section>
+
+      <section id="topics" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Topics of interest</p>
+          <h2>Research that advances grounded, efficient, and safe agentic pipelines</h2>
+        </div>
+        <div class="grid cards">
+          <article>
+            <h3>Heterogeneous and multimodal retrieval</h3>
+            <ul>
+              <li>Unified visual and text search across images, video, charts, documents, and UI.</li>
+              <li>Hybrid dense and lexical retrieval, multilingual search, long-context documents.</li>
+              <li>Region, page, and moment retrieval at fine granularity.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Multimodal reranking</h3>
+            <ul>
+              <li>Cross-encoders and late-interaction variants for grounded selection.</li>
+              <li>Throughput and latency trade-offs, distillation, caching, streaming.</li>
+              <li>Calibration and abstention at top-k for agent handoffs.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Agentic planning and tool use</h3>
+            <ul>
+              <li>Query reformulation, routing, and tool composition across modalities.</li>
+              <li>OCR-free parsing, layout and chart tools, SQL and code tools.</li>
+              <li>Safety-conscious tool use with guardrails and recovery.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Grounding, provenance, and reliability</h3>
+            <ul>
+              <li>Evidence overlays, citation fidelity, and structured alignment.</li>
+              <li>Verification protocols that resist leakage and prompt injection.</li>
+              <li>Robustness to UI drift, style shifts, and format changes.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Data enrichment and evaluation</h3>
+            <ul>
+              <li>Layout and structure extraction, temporal alignment.</li>
+              <li>Reproducible harnesses, prompts, traces, and leaderboards.</li>
+              <li>Shared reporting practices for cross-domain benchmarks.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="dates" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Important dates</p>
+          <h2>Timeline (Anywhere on Earth)</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="date">Jan 6, 2026</span>
+            <div>
+              <h3>Call for Papers posted</h3>
+              <p>CFP opens with submission details and reviewer signup.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Mar 5, 2026</span>
+            <div>
+              <h3>Paper submission deadline</h3>
+              <p>OpenReview submission closes at 23:59 AoE.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Mar 20-22, 2026</span>
+            <div>
+              <h3>Author response (optional)</h3>
+              <p>Lightweight rebuttal window to clarify factual issues.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Mar 28, 2026</span>
+            <div>
+              <h3>Notification to authors</h3>
+              <p>Decisions released via OpenReview.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Apr 11, 2026</span>
+            <div>
+              <h3>Camera-ready due</h3>
+              <p>Final versions for CVPR workshop proceedings.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Apr 18, 2026</span>
+            <div>
+              <h3>Final program due</h3>
+              <p>Schedule and speaker lineup finalized.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="date">Jun 3-4, 2026</span>
+            <div>
+              <h3>Workshop day in Denver, USA</h3>
+              <p>Full-day program with keynotes, panels, and posters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="speakers" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Confirmed speakers</p>
+          <h2>Keynotes and panelists bridging retrieval, agents, and vision</h2>
+        </div>
+        <div class="grid speakers">
+          <article>
+            <div class="avatar">KG</div>
+            <h3>Kristen Grauman</h3>
+            <p>University of Texas at Austin</p>
+            <span>Video understanding, long-horizon grounding</span>
+          </article>
+          <article>
+            <div class="avatar">MB</div>
+            <h3>Mohit Bansal</h3>
+            <p>University of North Carolina at Chapel Hill</p>
+            <span>Multimodal generation, agentic reasoning</span>
+          </article>
+          <article>
+            <div class="avatar">YL</div>
+            <h3>Yunyao Li</h3>
+            <p>Adobe</p>
+            <span>Knowledge graphs, enterprise retrieval</span>
+          </article>
+          <article>
+            <div class="avatar">DR</div>
+            <h3>Dan Roth</h3>
+            <p>University of Pennsylvania / Oracle AI</p>
+            <span>Grounded reasoning, robust inference</span>
+          </article>
+          <article>
+            <div class="avatar">NR</div>
+            <h3>Nil Reimers</h3>
+            <p>Cohere</p>
+            <span>Dense embeddings, multimodal search</span>
+          </article>
+          <article>
+            <div class="avatar">IG</div>
+            <h3>Iryna Gurevych</h3>
+            <p>Technical University of Darmstadt</p>
+            <span>Evaluation methodology, multilingual resources</span>
+          </article>
+          <article>
+            <div class="avatar">SY</div>
+            <h3>Scott Wen-Tau Yih</h3>
+            <p>Meta</p>
+            <span>Efficient retrieval, multi-hop QA</span>
+          </article>
+          <article class="highlight">
+            <h3>Panel</h3>
+            <p>From Retrieval to Action: What Should Agentic Vision Systems Verify?</p>
+            <span>Diverse perspectives across industry and academia.</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="program" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Program</p>
+          <h2>Full-day agenda (subject to CVPR guidelines)</h2>
+        </div>
+        <div class="schedule">
+          <div class="schedule-item">
+            <span>09:00 - 09:10</span>
+            <div>
+              <h3>Welcome and introduction</h3>
+              <p>Workshop overview and goals.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>09:10 - 09:50</span>
+            <div>
+              <h3>Keynote 1</h3>
+              <p>Grounded retrieval at scale.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>09:50 - 10:30</span>
+            <div>
+              <h3>Oral Session I</h3>
+              <p>3-4 short orals, 7-8 minutes each.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>10:30 - 11:00</span>
+            <div>
+              <h3>Poster session and coffee break</h3>
+              <p>Posters, demos, and networking.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>11:00 - 11:40</span>
+            <div>
+              <h3>Keynote 2</h3>
+              <p>Evaluation and grounding in multimodal systems.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>11:40 - 12:00</span>
+            <div>
+              <h3>Demos</h3>
+              <p>Live systems with grounded evidence and tools.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>12:00 - 13:00</span>
+            <div>
+              <h3>Lunch break</h3>
+              <p>Continue discussions with speakers and organizers.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>13:00 - 13:45</span>
+            <div>
+              <h3>Panel</h3>
+              <p>From Retrieval to Action: What Should Agentic Vision Systems Verify?</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>13:45 - 14:30</span>
+            <div>
+              <h3>Oral Session II</h3>
+              <p>3-4 short orals, 7-8 minutes each.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>14:30 - 15:00</span>
+            <div>
+              <h3>Keynote 3</h3>
+              <p>Agentic tool use and safe deployment.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>15:00 - 15:30</span>
+            <div>
+              <h3>Poster session and coffee break</h3>
+              <p>Second poster and demo block.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>15:30 - 16:00</span>
+            <div>
+              <h3>Keynote 4</h3>
+              <p>Efficiency, cost, and energy-aware retrieval.</p>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span>16:30 - 17:00</span>
+            <div>
+              <h3>Awards and closing</h3>
+              <p>Best paper, demos, and closing remarks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="submission" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Submission</p>
+          <h2>OpenReview submissions, double-blind, archival proceedings</h2>
+        </div>
+        <div class="split">
+          <div>
+            <p>
+              We welcome archival workshop papers in the CVPR 2026 Workshops proceedings. Submissions
+              are double-blind, with three expert reviews and Area Chair oversight. A short author
+              response window may be offered.
+            </p>
+            <ul class="checklist">
+              <li>Formatting: CVPR style, 8 pages max (references excluded).</li>
+              <li>Artifacts: code, data, and models encouraged.</li>
+              <li>Evaluation: grounded evidence, calibration, and efficiency metrics.</li>
+              <li>Ethics: required for sensitive visual data or deployment risk.</li>
+            </ul>
+          </div>
+          <div class="callout" id="submit">
+            <h3>Submission portal</h3>
+            <p>OpenReview link will be posted here when the CFP is live.</p>
+            <a class="btn primary" href="#">OpenReview (TBA)</a>
+            <a class="btn ghost" href="files/GRAIL_WORKSHOP_CVPR_Accepted.pdf">Workshop proposal PDF</a>
+          </div>
+        </div>
+        <div class="policy-grid">
+          <div>
+            <h3>Review criteria</h3>
+            <p>
+              Technical merit, grounded evaluation, efficiency, reproducibility, and broader safety
+              considerations.
+            </p>
+          </div>
+          <div>
+            <h3>Presentation format</h3>
+            <p>Accepted papers appear as posters or short orals. In-person presentation required.</p>
+          </div>
+          <div>
+            <h3>Conflict of interest</h3>
+            <p>Same-employer, advisor-advisee, recent co-author, or close personal conflicts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="organizers" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Organizers</p>
+          <h2>Cross-community leadership spanning CV, IR, NLP, HCI, and systems</h2>
+        </div>
+        <div class="grid organizers">
+          <article>
+            <h3>Amit Agarwal</h3>
+            <p>Oracle AI</p>
+            <span>General Chair, Agentic-Vision Systems and Data Enrichment</span>
+          </article>
+          <article>
+            <h3>Vivek Gupta</h3>
+            <p>Arizona State University</p>
+            <span>General Chair, Heterogeneous Retrieval (Structured Sources)</span>
+          </article>
+          <article>
+            <h3>Vivek Srikumar</h3>
+            <p>University of Utah</p>
+            <span>Grounding and Reliability</span>
+          </article>
+          <article>
+            <h3>Tao Sheng</h3>
+            <p>Oracle AI</p>
+            <span>Agentic Planning and Tool Use</span>
+          </article>
+          <article>
+            <h3>Alice Oh</h3>
+            <p>KAIST</p>
+            <span>Attribution and Multilingual Tracks</span>
+          </article>
+          <article>
+            <h3>Sara Hooker</h3>
+            <p>Adaption Labs</p>
+            <span>Efficiency and Industry Liaison</span>
+          </article>
+          <article>
+            <h3>Jyotika Singh</h3>
+            <p>Oracle AI</p>
+            <span>Agentic Memory and Human Interaction</span>
+          </article>
+          <article>
+            <h3>Hitesh Patel</h3>
+            <p>Oracle AI</p>
+            <span>Multilingual and Multimodal Responsible AI</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="committee" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Program committee</p>
+          <h2>Seed list (expanding to 60-75 members)</h2>
+        </div>
+        <div class="committee-list">
+          <span>Srikant Panda (Optum)</span>
+          <span>Hitesh Patel (Oracle)</span>
+          <span>Karan Dua (Oracle)</span>
+          <span>Olena Burda-Lassen (Sonepar / Univ. of Kyiv)</span>
+          <span>Meizhu Liu (Oracle / Univ. of Florida)</span>
+          <span>Ziyan Jiang (UC Santa Barbara)</span>
+          <span>Brian Lin (Instacart / UC Berkeley)</span>
+          <span>Gauri Kholkar (Pure Storage / BITS)</span>
+          <span>Marcela Medicina Ferreira (Univ. Estadual de Campinas)</span>
+          <span>Michael Avendi (Oracle / UC Irvine)</span>
+          <span>Yassi Abbasi (Oracle / USC)</span>
+          <span>Haodong Duan (Shanghai AI Lab)</span>
+          <span>Ulrich Bodenhofer (QUOMATIC.AI / FH Upper Austria)</span>
+          <span>Hasan Iqbal (MBZUAI)</span>
+          <span>Jaewon Jung (Seoul National University)</span>
+          <span>Nasib Ullah (Aalto University)</span>
+          <span>Kunal D (NVIDIA)</span>
+          <span>Hank Lee (CMU)</span>
+          <span>Neil Shah (Snapchat)</span>
+          <span>Praneet Pabolu (Splunk)</span>
+          <span>Nirmesh Shah (Sony Research)</span>
+          <span>Nishanth Madhusudhan (ServiceNow)</span>
+          <span>Osman Alperen Koras (Institute for AI in Medicine)</span>
+          <span>Akhil Arora (Aarhus University)</span>
+          <span>Koustuv Saha (University of Illinois)</span>
+        </div>
+      </section>
+
+      <section id="venue" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Venue and logistics</p>
+          <h2>In-person with hybrid support</h2>
+        </div>
+        <div class="grid venue">
+          <article>
+            <h3>Location</h3>
+            <p>CVPR 2026, Denver, USA. Workshop dates: Jun 3-4, 2026.</p>
+          </article>
+          <article>
+            <h3>Hybrid plan</h3>
+            <p>CVPR Zoom room for remote keynotes and live moderated Q and A.</p>
+          </article>
+          <article>
+            <h3>Session staffing</h3>
+            <p>Session chairs, A/V liaison, hybrid moderator, and poster lead.</p>
+          </article>
+          <article>
+            <h3>Accessibility</h3>
+            <p>Reserved front-row seating, mic runners, captioning support.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="inclusion" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Diversity, inclusion, and ethics</p>
+          <h2>Building a responsible and global community</h2>
+        </div>
+        <div class="split">
+          <div>
+            <p>
+              GRAIL-V prioritizes broad participation across geography, seniority, and institution
+              type. We will circulate the CFP via WiCV, Black in AI, LatinX in AI, WiML, and other
+              community channels.
+            </p>
+            <p>
+              Submissions must document artifact licenses, evidence overlays, calibration behavior,
+              and safety testing for leakage and prompt injection. Sensitive data requires an ethics
+              statement and controlled evaluation protocols.
+            </p>
+          </div>
+          <div class="callout">
+            <h3>What we ask authors to provide</h3>
+            <ul>
+              <li>Region, page, and moment evidence overlays.</li>
+              <li>Efficiency metrics: latency, memory, and energy.</li>
+              <li>Safety analysis: leakage, prompt injection, and tool misuse.</li>
+              <li>Licenses and provenance for every artifact.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsorship" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Sponsorship</p>
+          <h2>Support a high-impact workshop</h2>
+        </div>
+        <div class="split">
+          <div>
+            <p>
+              We welcome sponsorship to support travel grants, student awards, and demo
+              infrastructure. Oracle sponsorship is currently under discussion.
+            </p>
+          </div>
+          <div class="callout">
+            <h3>Become a sponsor</h3>
+            <p>Email the organizers to request sponsorship tiers and benefits.</p>
+            <a class="btn primary" href="mailto:amit.h.agarwal@oracle.com?subject=GRAIL-V%20sponsorship">Sponsor GRAIL-V</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section alt" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is GRAIL-V archival?</summary>
+            <p>Yes. Accepted papers appear in the CVPR 2026 Workshop proceedings.</p>
+          </details>
+          <details>
+            <summary>Can I submit non-archival or demo-only work?</summary>
+            <p>Yes. We welcome demos and industry showcases. Indicate this in your submission.</p>
+          </details>
+          <details>
+            <summary>Are remote presentations allowed?</summary>
+            <p>CVPR policy prefers in-person presentations. Remote exceptions require documentation.</p>
+          </details>
+          <details>
+            <summary>Do you require code or data release?</summary>
+            <p>Strongly encouraged. Please include artifact links and licenses when possible.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="contact" class="section" data-animate>
+        <div class="section-title">
+          <p class="eyebrow">Contact</p>
+          <h2>Stay connected</h2>
+        </div>
+        <div class="contact-card">
+          <div>
+            <h3>General inquiries</h3>
+            <p>Reach out to the organizers with questions about submissions, sponsorship, or program.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:amit.h.agarwal@oracle.com">Email organizers</a>
+            <a class="btn ghost" href="files/GRAIL_WORKSHOP_CVPR_Accepted.pdf">Workshop proposal</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>GRAIL-V @ CVPR 2026</strong>
+        <p>Grounded Retrieval and Agentic Intelligence for Vision-Language.</p>
+      </div>
+      <div>
+        <span>Follow CVPR 2026 policies and code of conduct.</span>
+        <span>Updates will be posted here as the CFP opens.</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

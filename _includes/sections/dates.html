@@ -1,0 +1,17 @@
+<section id="dates" class="section" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">Important dates</p>
+    <h2>Timeline (Anywhere on Earth)</h2>
+  </div>
+  <div class="timeline">
+    {% for item in site.data.dates %}
+      <div class="timeline-item">
+        <span class="date">{{ item.date }}</span>
+        <div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

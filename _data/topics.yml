@@ -1,0 +1,25 @@
+- title: "Heterogeneous and multimodal retrieval"
+  items:
+    - "Unified visual and text search across images, video, charts, documents, and UI."
+    - "Hybrid dense and lexical retrieval, multilingual search, long-context documents."
+    - "Region, page, and moment retrieval at fine granularity."
+- title: "Multimodal reranking"
+  items:
+    - "Cross-encoders and late-interaction variants for grounded selection."
+    - "Throughput and latency trade-offs, distillation, caching, streaming."
+    - "Calibration and abstention at top-k for agent handoffs."
+- title: "Agentic planning and tool use"
+  items:
+    - "Query reformulation, routing, and tool composition across modalities."
+    - "OCR-free parsing, layout and chart tools, SQL and code tools."
+    - "Safety-conscious tool use with guardrails and recovery."
+- title: "Grounding, provenance, and reliability"
+  items:
+    - "Evidence overlays, citation fidelity, and structured alignment."
+    - "Verification protocols that resist leakage and prompt injection."
+    - "Robustness to UI drift, style shifts, and format changes."
+- title: "Data enrichment and evaluation"
+  items:
+    - "Layout and structure extraction, temporal alignment."
+    - "Reproducible harnesses, prompts, traces, and leaderboards."
+    - "Shared reporting practices for cross-domain benchmarks."

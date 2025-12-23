@@ -1,0 +1,27 @@
+<section id="about" class="section" data-animate>
+  <div class="section-title">
+    <p class="eyebrow">{{ site.data.about.eyebrow }}</p>
+    <h2>{{ site.data.about.title }}</h2>
+  </div>
+  <div class="split">
+    <div>
+      {% for paragraph in site.data.about.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+    <div class="callout">
+      <h3>{{ site.data.about.callout.title }}</h3>
+      <ul>
+        {% for item in site.data.about.callout.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="tracks">
+    <span class="tag">{{ site.data.about.tracks.primary_label }}</span>
+    <p>{{ site.data.about.tracks.primary }}</p>
+    <span class="tag">{{ site.data.about.tracks.secondary_label }}</span>
+    <p>{{ site.data.about.tracks.secondary }}</p>
+  </div>
+</section>

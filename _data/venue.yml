@@ -1,0 +1,11 @@
+eyebrow: "Venue and logistics"
+title: "In-person with hybrid support"
+items:
+  - title: "Location"
+    description: "CVPR 2026, Denver, USA. Workshop dates: Jun 3-4, 2026."
+  - title: "Hybrid plan"
+    description: "CVPR Zoom room for remote keynotes and live moderated Q and A."
+  - title: "Session staffing"
+    description: "Session chairs, A/V liaison, hybrid moderator, and poster lead."
+  - title: "Accessibility"
+    description: "Reserved front-row seating, mic runners, captioning support."
